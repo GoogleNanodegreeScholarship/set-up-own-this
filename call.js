@@ -25,8 +25,18 @@ function sayHello(message) {
 sayHello.call(cat, 'Nice to see you');
 //returns Nice to see you Bailey
 
-//apply method does the same, it sets up first argument as 'this', but second argument has to be an array
+//apply method does the same, it sets up first argument as 'this', but second argument has to be an array of arguments
 sayHello.apply(cat, ['Hello']);
 //Hello, Bailey
 
+//Second example 
+
+const andrew = {
+  name: 'Andrew'
+};
+
+function introduce(language) {
+  console.log(`I'm ${this.name} and my favorite programming language is ${language}.`);
+}
+introduce.call(andrew, 'JavaScript')
 
